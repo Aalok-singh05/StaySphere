@@ -39,7 +39,7 @@ const store = MongoStore.create({
     mongoUrl : dbUrl,
     touchAfter : 24*3600,
 });
-store.on("error" , ()=> {
+store.on("error" , (err)=> {
     console.log("error in mongo" , err);
 })
 const sessionOptions = {
